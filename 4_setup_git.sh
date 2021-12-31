@@ -18,7 +18,6 @@ cd $base_dir/oTree.git
 git init --bare
 cd $base_did
 
-
 # prepare post-hook script
 cat <<EOF > $tmp
 #!/bin/bash
@@ -35,7 +34,7 @@ fi
 
 # recreate venv
 echo "[log] - create venv"
-python3.6 -m venv \$VENV_DIR
+python3.9 -m venv \$VENV_DIR
 
 # activate
 echo "[log] - activate venv"

@@ -1,15 +1,15 @@
 #!/bin/bash
 #
-# This script is supposed to be run on a clean Debian 9 installation.
+# This script is supposed to be run on a clean ubuntu 20.04 installation.
 #
 # For the oTree server setup, we need the following software:
-# Python 3.6
+# Python 3.9
 # PostgreSQL
 # Redis
 # Supervisor
 # Nginx
 #
-# The first three make sure oTree works well (there are some bugs with Python 3.5).
+# The first three make sure oTree works well.
 # Supervisor keeps the Webserver alive, i.e. restarts on reboot, crash etc.
 # Nginx serves as a reverse proxy to be able to handle HTTPS requests.
 # 
@@ -27,12 +27,13 @@
 # so we add a group that is allowed to do so w/o password.
 
 # update packages list and install required software
-apt-get update
-apt-get install -y libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm zlib1g-dev libssl-dev libncurses5-dev libncursesw5-dev xz-utils tk-dev postgresql postgresql-contrib redis-server git supervisor nginx sudo
+sudo apt update
+sudo apt upgrade
+sudo apt install software-properties-common
+sudo apt install libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm zlib1g-dev libssl-dev libncurses5-dev libncursesw5-dev xz-utils tk-dev postgresql postgresql-contrib redis-server git supervisor nginx sudo
 
 # create otree user
 adduser otree
-
 
 # add him to sudo group.
 # we will undo this later to lock down the user.
