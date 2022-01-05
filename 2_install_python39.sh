@@ -19,8 +19,8 @@ make -j8
 # python to link to python2.7
 sudo make altinstall
 sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.9 40
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 50
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 30
+# sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 50
+# sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 30
 cd ..
 sudo rm -rf Python-3.9.9
 

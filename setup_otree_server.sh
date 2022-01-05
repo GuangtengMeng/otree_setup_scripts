@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # This script is supposed to be run on a clean ubuntu 20.04 installation.
+# You need git and setup git. Additionally, git clone https://github.com/GuangtengMeng/otree_setup_scripts.git
 #
 # For the oTree server setup, we need the following software:
 # Python 3.9
@@ -53,7 +54,7 @@ EOF
 mv $tmp /etc/sudoers.d/otree_supervisor
 
 # move scripts to user's home folder
-unzip otree_setup_scripts.zip
+# unzip otree_setup_scripts.zip
 mv *.sh /home/otree/
 chmod +x /home/otree/*.sh 
 chown otree:otree /home/otree/*.sh
