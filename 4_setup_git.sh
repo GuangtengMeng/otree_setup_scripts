@@ -44,8 +44,8 @@ source /home/\$(whoami)/.otree_env
 
 # install requirements
 echo "[log] - install requirements"
-pip install -U pip
-pip install -r \$GIT_WORK_TREE/requirements.txt
+pip3.9 install -U pip3.9
+pip3.9 install -r \$GIT_WORK_TREE/requirements.txt
 
 echo "[log] - Staring DB migration"
 cd \$GIT_WORK_TREE
